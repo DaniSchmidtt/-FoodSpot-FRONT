@@ -24,7 +24,8 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          ionic serve --if-present
+          npm run build
+          --ionic serve --if-present
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
