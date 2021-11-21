@@ -21,10 +21,11 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: npm install, build, and test
+      - name: npm install, build
         run: |
           npm install
           npm install -g @ionic/cli
+          Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
           ionic serve          
 
       - name: Upload artifact for deployment job
